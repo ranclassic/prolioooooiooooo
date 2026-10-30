@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio | รันชณ์นพัฒน์ จรรยาอมรกุล</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#e8edf2; --surface:#f4f7fa; --ink:#14213d; --muted:#51607a; --line:#b9c4d2;
+  --accent:#2347f5; --accent-ink:#ffffff; --mark:#ffd23f;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1626; --surface:#18223a; --ink:#e8edf6; --muted:#9aa8c2; --line:#2c3a58;
+    --accent:#7c93ff; --accent-ink:#0f1626; --mark:#ffd23f; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1626; --surface:#18223a; --ink:#e8edf6; --muted:#9aa8c2; --line:#2c3a58;
+  --accent:#7c93ff; --accent-ink:#0f1626; --mark:#ffd23f; color-scheme:dark;
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 4rem)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Anuphan","Noto Sans Thai",system-ui,sans-serif;font-size:1.0625rem;line-height:1.7}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--ink);z-index:10}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+
+/* แถบข้อมูลที่ล็อกไว้ตลอด */
+.lock{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--ink);color:var(--bg)}
+.lock .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:.7rem;padding-bottom:.7rem;font-weight:600}
+.lock span:last-child{font-weight:400;opacity:.85}
+
+.hero{padding:clamp(3rem,9vw,6rem) 0 clamp(3rem,7vw,4.5rem);border-bottom:2px solid var(--ink)}
+.hero h1{margin:0;font-weight:700;font-size:clamp(2.6rem,9vw,6.5rem);line-height:1.08;letter-spacing:-.02em}
+.hero h1 span{display:block;overflow:hidden}
+.hero h1 span i{display:inline-block;font-style:normal;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 span:nth-child(2) i{animation-delay:.12s;color:var(--accent)}
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+.hero p{max-width:34rem;margin:2rem 0 0;color:var(--muted);font-size:1.2rem}
+.hero mark{background:var(--mark);color:#14213d;padding:0 .3em}
+
+section{padding:clamp(2.5rem,6vw,4.5rem) 0;border-bottom:1px solid var(--line)}
+h2{margin:0 0 1.75rem;font-size:1.75rem;font-weight:700}
+
+dl.info{display:grid;grid-template-columns:max-content 1fr;gap:.9rem 2rem;margin:0;border-top:1px solid var(--ink);padding-top:1.25rem}
+dl.info dt{color:var(--muted)}
+dl.info dd{margin:0;font-weight:600;font-size:1.15rem}
+.todo{color:var(--accent);font-weight:400}
+
+.tablebox{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:22rem}
+th,td{text-align:left;padding:.85rem .5rem;border-bottom:1px solid var(--line)}
+thead th{border-bottom:1px solid var(--ink);color:var(--muted);font-weight:600}
+td:last-child,th:last-child{text-align:right;font-variant-numeric:tabular-nums}
+tfoot td{font-weight:700;border-bottom:0;border-top:2px solid var(--ink);font-size:1.15rem}
+.note{margin-top:1rem;color:var(--muted);font-size:.95rem}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.cols p{margin:0 0 1rem;max-width:34rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin:0;padding:0;align-content:flex-start}
+.chips li{padding:.35rem 1rem;border:1.5px solid var(--ink);border-radius:999px;font-weight:600}
+
+.works{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.works li{display:grid;grid-template-columns:5rem 1fr;gap:1rem;padding:1.2rem .5rem;border-bottom:1px solid var(--line)}
+.works .yr{color:var(--muted)}
+.works b{display:block;font-size:1.2rem}
+.works span span{color:var(--muted)}
+footer{padding:2rem 0;color:var(--muted);font-size:.95rem}
+
+@media (max-width:700px){
+  .cols{grid-template-columns:1fr;gap:2rem}
+  dl.info{grid-template-columns:1fr;gap:.1rem}
+  dl.info dd{margin-bottom:.8rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero h1 span i{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="lock" role="banner">
+  <div class="wrap">
+    <span>รันชณ์นพัฒน์ จรรยาอมรกุล</span>
+    <span>ม.3/4 เลขที่ 11</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <main>
+    <div class="hero">
+      <h1><span><i>รันชณ์นพัฒน์</i></span><span><i>จรรยาอมรกุล</i></span></h1>
+      <p>นักเรียนชั้น <mark>มัธยมศึกษาปีที่ 3/4</mark> เลขที่ 11 แฟ้มสะสมผลงานนี้รวบรวมข้อมูลของฉัน ผลการเรียน และสิ่งที่ฉันภูมิใจ</p>
+    </div>
+
+    <section aria-labelledby="info-h">
+      <h2 id="info-h">แนะนำตัว</h2>
+      <dl class="info">
+        <dt>ชื่อ-สกุล</dt><dd>รันชณ์นพัฒน์ จรรยาอมรกุล</dd>
+        <dt>ชั้นเรียน</dt><dd>มัธยมศึกษาปีที่ 3/4</dd>
+        <dt>เลขที่</dt><dd>11</dd>
+        <dt>สายการเรียน</dt><dd class="todo">ใส่สายการเรียนของคุณ (เช่น วิทย์-คณิต, ศิลป์-ภาษา)</dd>
+        <dt>โรงเรียน</dt><dd class="todo">ใส่ชื่อโรงเรียน</dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="grade-h">
+      <h2 id="grade-h">ผลการเรียน</h2>
+      <div class="tablebox">
+        <table>
+          <thead><tr><th>วิชา</th><th>เกรด</th></tr></thead>
+          <tbody>
+            <tr><td>ภาษาไทย</td><td class="todo">—</td></tr>
+            <tr><td>คณิตศาสตร์</td><td class="todo">—</td></tr>
+            <tr><td>วิทยาศาสตร์และเทคโนโลยี</td><td class="todo">—</td></tr>
+            <tr><td>สังคมศึกษา ศาสนา และวัฒนธรรม</td><td class="todo">—</td></tr>
+            <tr><td>ภาษาอังกฤษ</td><td class="todo">—</td></tr>
+            <tr><td>สุขศึกษาและพลศึกษา</td><td class="todo">—</td></tr>
+            <tr><td>ศิลปะ</td><td class="todo">—</td></tr>
+            <tr><td>การงานอาชีพ</td><td class="todo">—</td></tr>
+          </tbody>
+          <tfoot><tr><td>เกรดเฉลี่ยรวม (GPAX)</td><td class="todo">—</td></tr></tfoot>
+        </table>
+      </div>
+      <p class="note">ตัวเลข "—" คือช่องที่รอใส่เกรดจริงจากใบ ปพ.1 หรือใบแสดงผลการเรียน</p>
+    </section>
+
+    <section aria-labelledby="about-h">
+      <h2 id="about-h">ความสนใจและเป้าหมาย</h2>
+      <div class="cols">
+        <div>
+          <p class="todo">เขียนแนะนำตัวสั้น ๆ 2-3 ประโยค เช่น วิชาที่ชอบ สิ่งที่ถนัด และอยากเรียนต่อสายไหนหลังจบ ม.3</p>
+        </div>
+        <ul class="chips">
+          <li class="todo">ความสนใจ 1</li><li class="todo">ความสนใจ 2</li><li class="todo">ทักษะ 1</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="work-h">
+      <h2 id="work-h">กิจกรรมและผลงาน</h2>
+      <ul class="works">
+        <li><span class="yr todo">ปี</span><span><b class="todo">ชื่อกิจกรรมหรือผลงาน</b><span>บอกสั้น ๆ ว่าทำอะไร และได้อะไรจากการทำ</span></span></li>
+        <li><span class="yr todo">ปี</span><span><b class="todo">ชื่อกิจกรรมหรือผลงาน</b><span>เช่น รางวัล การแข่งขัน ชมรม หรือโครงงาน</span></span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>แฟ้มสะสมผลงาน ม.3/4 · รันชณ์นพัฒน์ จรรยาอมรกุล เลขที่ 11</footer>
+</div>
+</body>
+</html>
